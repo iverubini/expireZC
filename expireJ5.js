@@ -22,10 +22,21 @@ let x=150;
 let y=150;
 let a = 0; 
 let t; 
-let tt;
+let ctx, ctxOn;
 
 
-function setup(){
+function setup()
+  
+   {
+    ctx = getAudioContext();
+    ctxOn = createButton('CLICK / TAP HERE TO START');
+    ctxOn.mousePressed(() => {
+    ctx.resume().then(() => {
+    console.log('Audio Context is now ON');
+        ctxOn.hide();
+    });
+    });
+  
   createCanvas(w=windowWidth, h=windowHeight);
   background(50, 200, 100);
   frameRate(100);
