@@ -61,7 +61,7 @@ function draw(){
   let voz=micro.getLevel()*800;
   a=a+0.1; //qto menor, mais espaçada/suave fica a curva
   x=x+random(0,9); 
-  let fala=micro.getLevel()*200;
+  let fala=micro.getLevel()*250;
   
   print(micro.getLevel(0));
 
